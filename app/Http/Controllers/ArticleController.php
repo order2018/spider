@@ -10,12 +10,14 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
 
+        $content = strip_tags(htmlspecialchars_decode($article->content));
+
         //dd($this->gPic_Url($article->content));
 
-        $preg = "/<img.*?src=[\"|\'](.*?)[\"|\'].*?>/";
+        /*$preg = "/<img.*?src=[\"|\'](.*?)[\"|\'].*?>/";
         $replace = '<img src="$1">';
 
-        $content = preg_replace($preg, $replace, $article->content);
+        $content = preg_replace($preg, $replace, $article->content);*/
 
         return view('article.show',compact('article','content'));
     }
