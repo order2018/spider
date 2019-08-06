@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ $article->title }}</div>
                 <div class="card-body">
-                    {!! $article->content !!}
+                    {!! $content !!}
                 </div>
             </div>
         </div>
