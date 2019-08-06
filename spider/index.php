@@ -50,7 +50,8 @@ $configs = array(
         ),
         array(
             'name' => "content",
-            'selector' => "//div[@class='show-content-free']",
+            //'selector' => "//div[@class='show-content-free']",
+            'selector' => "//div[contains(@class,'show-content-free')]",
             'required' => true,
         ),
     ),
