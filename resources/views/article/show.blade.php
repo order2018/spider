@@ -7,7 +7,11 @@
             <div class="card">
                 <div class="card-header">{{ $article->title }}</div>
                 <div class="card-body">
-                    {!! $content !!}
+                    {{ $content }}
+                    <br>
+                    @foreach($imgs as $val)
+                        <img src="{{$val}}" alt="" width="100%">
+                    @endforeach
                 </div>
             </div>
         </div>
